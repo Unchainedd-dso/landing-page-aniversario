@@ -1,0 +1,64 @@
+@use 'variables' as v;
+
+.info-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+    margin-top: 32px;
+    background-color: v.$infoBackground;
+
+    &__infos{
+        display: flex;
+        gap: 40px;
+    }
+
+    &__item{
+        b{
+            color: v.$infoTextColor;
+            font-size: 18px;
+        }
+        p{
+            color: v.$infoTextColor;
+            font-size: 14px;
+        }
+    }
+    
+    &__button{
+        background-color: v.$infoButton;
+        color: v.$textColor;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        font-weight: bold;
+        font-family: Roboto, sans-serif;
+        justify-content: center;
+        white-space: nowrap;
+    }
+}
+
+
+@media screen and (max-width:767px){
+    .info-bar{
+        display: block;
+
+        &__infos{
+            display: block;
+        }
+
+        &__item{
+            margin-bottom: 16px;
+        }
+    }
+}
+
+@media screen and (max-width:1023px){
+    .info-bar{
+        padding: 16px;
+        
+        &__infos{
+            gap: 16px;
+        }
+    }
+}
+

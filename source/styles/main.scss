@@ -1,0 +1,32 @@
+@use 'hero';
+@use 'info-bar';
+@use 'events';
+@use 'variables' as v;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    color: v.$textColor;
+    list-style: none;
+}
+
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width:767px){
+    .container{
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width:1023px){
+    .container{
+        max-width: 90%;
+    }
+}
